@@ -1,23 +1,15 @@
-parquet-compatibility
-=====================
+# parquet-compatibility
 
-compatibility tests to make sur C and Java implementations can read each other
+Compatibility tests to make sure Julia can read parquet files from pyarrow output (open to adding others pyarrow is what I am familiar with so that is what I used)
 
-Submodules:
------------
-* parquet-compat
-* parquet-testdata
-* parquet-compat-$version
+## Original_Data
 
-parquet-compat
---------------
-This stores the test sources. This is not a maven submodule.
+Contains the original csv files used as the basis for the parquet files
 
-parquet-testdata
-----------------
-stores all the csvs and impala files (todo discuss impala compatibility test)
+## Parquet_Creation_Scripts
 
-parquet-compat-$version:
-------------------------
-pom.xml has dependency on the corresponding version of parquet-mr.
-src is a symlink to sources in parquet-compat (../parquet-compat/src).
+This holds the scripts for the creation of the parquet files (right now only using pandas and pyarrow in python I'm open to other options as well)
+
+## Parquet_Files
+
+Stores all the parquet files to be tested (I'm open to adding more types of data to this for additional testing)
