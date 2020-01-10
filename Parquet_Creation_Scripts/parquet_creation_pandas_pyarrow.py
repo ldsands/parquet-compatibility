@@ -14,7 +14,7 @@ compression_types = ["NONE", "SNAPPY", "GZIP", "ZSTD"]
 
 csv_files = Original_Data.glob("*.csv")
 for file in csv_files:
-    dta = pd.read_csv(file, delimiter="|")
+    dta = pd.read_csv(file)
     for compression_type in compression_types:
         filename = (
             str(Parquet_Files.resolve())
